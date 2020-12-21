@@ -47,12 +47,6 @@ button {
     margin: auto;
 }
 
-.responsive-image {
-    max-width: 100px;
-    display: block;
-    margin: auto;
-}
-
 .footer {
     background-color: var(--primary-color);
 }
