@@ -2,20 +2,18 @@ let btnTranslate = document.querySelector("button");
 let textInput = document.querySelector("#txt-input");
 let outputMsg = document.querySelector("#output-msg");
 
-var serverURL = "https://api.funtranslations.com/translate/minion.json"
+const serverURL = "https://api.funtranslations.com/translate/minion.json"
 
-function constructUrl(inputText) {
-  return serverURL + "?" + "text=" + inputText;
-}
+const constructUrl = inputText => serverURL + "?" + "text=" + inputText;
 
-function errorHandler(error) {
+const errorHandler = error => {
   console.log("error occurred", error);
   alert(
     "Error occured! Please try after sometime we will resolve your issue very soon."
   );
 }
 
-function clickHandler() {
+const clickHandler = () => {
   var inputText = textInput.value;
 
   fetch(constructUrl(inputText))
